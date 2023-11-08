@@ -1,0 +1,1 @@
+Vytvorit program, ktory vypise moje meno minimalne 5 pismen, vykreslene pomocou stvorcekov zo suboru pixel_letters.jpg

@@ -59,3 +59,5 @@ canvas.create_arc(475, 500, 575, 600 ,style = tk.ARC, width = 40, outline = "gre
 canvas.create_arc(575, 600, 475, 500, start = 270,style = tk.ARC, width = 40, outline = "grey")
 canvas.create_arc(475,500, 575, 600, start = 180,style = tk.ARC, width =40 , outline = "grey")
 a= input("")
+
+canvas.loop()
