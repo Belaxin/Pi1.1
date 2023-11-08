@@ -16,12 +16,13 @@ cislo2 = random.randint(1,5)
 farba = random.choice(("red", "green", "blue"))
 print(cislo2)
 
+
+x1 = random.randrange(0, 1080)
+y1 = random.randrange(0, 1080)
+x2 = random.randrange(0, 1080)
+y2 = random.randrange(0, 1080)
 top = Tk()
 top.geometry("1080x1080")
-
-
-canvas = canvas()
-while True:
-    x = random.randrange(0, 1080)
-    y = random.randrange(0, 1080)
-    canvas
+canvas = Canvas()
+canvas.create_line()
+top.mainloop()
