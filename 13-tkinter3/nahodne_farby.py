@@ -1,6 +1,6 @@
 from tkinter import *
 import random
-canvas = Canvas(width=1000, height=1000)
+canvas = Canvas(width=1000, height=500)
 canvas.pack()
 meno = "Tomas"
 priezvisko = "Matis"
@@ -23,7 +23,7 @@ while True:
     if y<0:
         y= 500
     if y>1000:
-        y= 500
+        y= 0
     if x>1000:
         x = 0
     r = random.randint(0,255)

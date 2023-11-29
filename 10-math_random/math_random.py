@@ -17,14 +17,13 @@ cislo2 = random.randint(1, 5)
 farba = random.choice(("red", "green", "blue"))
 print(cislo2)
 
-
+canvas = Canvas(width=1000, height=1000)
+canvas.pack()
 while True:
-    x1 = random.randrange(0, 1080)
-    y1 = random.randrange(0, 1080)
-    x2 = random.randrange(0, 1080)
-    y2 = random.randrange(0, 1080)
-    canvas = Canvas(width=1000,height=1000)
-    canvas.pack()
+    x1 = random.randint(0, 1080)
+    y1 = random.randint(0, 1080)
+    x2 = random.randint(0, 1080)
+    y2 = random.randint(0, 1080)
     canvas.create_line(x1,y1 ,x2,y2)
-    time.sleep(1)
-    canvas.mainloop()
+    canvas.update()
+
