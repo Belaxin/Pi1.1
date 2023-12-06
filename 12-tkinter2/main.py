@@ -12,7 +12,7 @@ xx =x
 pocet = (width-2)//(d+5)
 stvrtina = d//4
 # // celociselne delenie
-# napr 7 // 3 = 2
+# napr 7 // 3 = 2z
 for g in range((height-2)//(d+d//2)):
     for i in range(pocet):
             colors =random.choice( ["blue", "red", "purple", "light sea green", "snow4", "pink"])
