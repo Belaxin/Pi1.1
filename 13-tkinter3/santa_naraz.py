@@ -10,10 +10,12 @@ canvas.pack()
 santa = PhotoImage(file='./santa.png')
 
 santa_y = 66
+santa_y2 = santa_y+height
 santa_x = width//2
 
 santa_object = canvas.create_image(santa_x,santa_y,image = santa)
 santa_object2 = canvas.create_image(santa_x+128,santa_y,image = santa)
+santa_object3 = canvas.create_image(santa_x-128,santa_y+height,image = santa)
 while True:
 
 
@@ -34,10 +36,12 @@ while True:
             santa_y = 66
             santa_object2 = canvas.create_image(width / 2 + 128, santa_y, image=santa)
 
+
     for i in range((height-110)//posun):
         canvas.move(santa_object, 0, -posun)
         canvas.update()
         time.sleep(0.01)
+
 
         canvas.update()
         time.sleep(0.01)
@@ -49,3 +53,4 @@ while True:
             canvas.delete(santa_object2)
             santa_y = 66
             santa_object2 = canvas.create_image(width / 2 + 128, santa_y, image=santa)
+
