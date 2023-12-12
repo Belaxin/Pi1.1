@@ -26,6 +26,7 @@ while True:
         y= 0
     if x>1000:
         x = 0
+        canvas.create_rectangle(0,0,1000,1000,fill="white")
     r = random.randint(0,255)
     g = random.randint(0,255)
     b = random.randint(0,255)

@@ -11,5 +11,5 @@ while True:
     canvas.create_line(1000, 500, x, y)
     canvas.create_line(0, 500, x, y)
     canvas.update()
-
+zz
 canvas.mainloop()
