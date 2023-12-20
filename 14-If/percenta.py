@@ -1,4 +1,4 @@
-maxBody = 30
+maxBody = 20
 percenta = float(input("zadaj body: ")) / maxBody * 100
 print(f"Ziskal si {percenta:.2f}%")
 print(f"Ziskal si {round(percenta, 2)}%")
@@ -21,7 +21,7 @@ print(f"Ziskal si {round(percenta, 2)}%")
 #                 print("nedostatocny!!!")
 #                 znamka = 5
 
-if percenta >= 90:
+if percenta >= 90 :
     print("Vyborny")
 elif 75 <= percenta:
     print("Chvalitebny")
