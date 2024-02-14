@@ -27,11 +27,17 @@ def spiral(deg, exponent,color):
         t.left(deg)
 
 
+for i in range(100):
+    square(100)
+    t.left(100/36)
+
 #pyramid(5, 10)
 #t.penup()
 #t.setposition(5,5)
 #t.pendown()
 spiral(179.5, 1.3,"black")
+
+
 turtle.mainloop()
 for j in range(4):
     for i in range(1, 5):
