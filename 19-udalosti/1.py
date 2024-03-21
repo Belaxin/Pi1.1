@@ -1,6 +1,7 @@
 xx = yy = None
 import random
 import tkinter as tk
+import time
 
 canvas = tk.Canvas(width=1000, height=800)
 canvas.pack()
@@ -62,8 +63,14 @@ def hore(event):
     # collision detection
     if xx - 15 < e < xx + 15 and yy - 15 < r < yy + 15:
         print("rip")
-        xx, yy = 100000, 1000000
-        canvas.create_image(500, 400, image=jumpscare)
+        canvas.delete(sex)
+        hyrax = canvas.create_image(500, 400, image=jumpscare)
+        canvas.update()
+        time.sleep(5)
+        canvas.delete(hyrax)
+        xx,yy = 800, 200
+        e,r = 500, 400
+        sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15)
 
 
 def lava(event):
@@ -88,8 +95,14 @@ def lava(event):
     # collision detection
     if xx - 15 < e < xx + 15 and yy - 15 < r < yy + 15:
         print("rip")
-        xx, yy = 100000, 1000000
-        canvas.create_image(500, 400, image=jumpscare)
+        canvas.delete(sex)
+        hyrax = canvas.create_image(500, 400, image=jumpscare)
+        canvas.update()
+        time.sleep(5)
+        canvas.delete(hyrax)
+        xx, yy = 800, 200
+        e, r = 500, 400
+        sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15)
 
 
 def dole(event):
@@ -114,8 +127,14 @@ def dole(event):
     # collision detection
     if xx - 15 < e < xx + 15 and yy - 15 < r < yy + 15:
         print("rip")
-        xx, yy = 100000, 1000000
-        canvas.create_image(500, 400, image=jumpscare)
+        canvas.delete(sex)
+        hyrax = canvas.create_image(500, 400, image=jumpscare)
+        canvas.update()
+        time.sleep(5)
+        canvas.delete(hyrax)
+        xx, yy = 800, 200
+        e, r = 500, 400
+        sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15)
 
 
 def prava(event):
@@ -140,8 +159,14 @@ def prava(event):
     # collision detection
     if xx - 15 < e < xx + 15 and yy - 15 < r < yy + 15:
         print("rip")
-        xx, yy = 100000, 1000000
-        canvas.create_image(500, 400, image=jumpscare)
+        canvas.delete(sex)
+        hyrax = canvas.create_image(500, 400, image=jumpscare)
+        canvas.update()
+        time.sleep(5)
+        canvas.delete(hyrax)
+        xx, yy = 800, 200
+        e, r = 500, 400
+        sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15)
 
 
 canvas.bind('<ButtonPress>', click)
