@@ -29,16 +29,7 @@ def click(event):
     if xx != None:
         canvas.create_line(xx, yy, x, y)
     xx, yy = x, y
-    # enemy
-    he = canvas.create_oval(e - 5, r - 5, e + 5, r + 5, fill="Brown")
-    if xx > e:
-        e += enemySpeed
-    elif xx < e:
-        e -= enemySpeed
-    if yy > r:
-        r += enemySpeed
-    else:
-        r -= enemySpeed
+    enemy(e,r,enemySpeed)
 
 
 def hore(event):
@@ -49,28 +40,8 @@ def hore(event):
     sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15,
                              fill=rgb(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
                              outline=rgb(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
-    # enemy
-    he = canvas.create_oval(e - 5, r - 5, e + 5, r + 5, fill="Brown")
-    if xx > e:
-        e += enemySpeed
-    elif xx < e:
-        e -= enemySpeed
-    if yy > r:
-        r += enemySpeed
-    else:
-        r -= enemySpeed
-
-    # collision detection
-    if xx - 15 < e < xx + 15 and yy - 15 < r < yy + 15:
-        print("rip")
-        canvas.delete(sex)
-        hyrax = canvas.create_image(500, 400, image=jumpscare)
-        canvas.update()
-        time.sleep(5)
-        canvas.delete(hyrax)
-        xx,yy = 800, 200
-        e,r = 500, 400
-        sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15)
+    enemy(e,r,enemySpeed)
+    collisionDetection(xx,yy,sex,hyrax)
 
 
 def lava(event):
@@ -81,28 +52,8 @@ def lava(event):
     sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15,
                              fill=rgb(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
                              outline=rgb(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
-    # enemy
-    he = canvas.create_oval(e - 5, r - 5, e + 5, r + 5, fill="Brown")
-    if xx > e:
-        e += enemySpeed
-    elif xx < e:
-        e -= enemySpeed
-    if yy > r:
-        r += enemySpeed
-    else:
-        r -= enemySpeed
-
-    # collision detection
-    if xx - 15 < e < xx + 15 and yy - 15 < r < yy + 15:
-        print("rip")
-        canvas.delete(sex)
-        hyrax = canvas.create_image(500, 400, image=jumpscare)
-        canvas.update()
-        time.sleep(5)
-        canvas.delete(hyrax)
-        xx, yy = 800, 200
-        e, r = 500, 400
-        sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15)
+    enemy(e,r,enemySpeed)
+    collisionDetection(xx,yy,sex,hyrax)
 
 
 def dole(event):
@@ -113,28 +64,8 @@ def dole(event):
     sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15,
                              fill=rgb(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
                              outline=rgb(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
-    # enemy
-    he = canvas.create_oval(e - 5, r - 5, e + 5, r + 5, fill="Brown")
-    if xx > e:
-        e += enemySpeed
-    elif xx < e:
-        e -= enemySpeed
-    if yy > r:
-        r += enemySpeed
-    else:
-        r -= enemySpeed
-
-    # collision detection
-    if xx - 15 < e < xx + 15 and yy - 15 < r < yy + 15:
-        print("rip")
-        canvas.delete(sex)
-        hyrax = canvas.create_image(500, 400, image=jumpscare)
-        canvas.update()
-        time.sleep(5)
-        canvas.delete(hyrax)
-        xx, yy = 800, 200
-        e, r = 500, 400
-        sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15)
+    enemy(e,r,enemySpeed)
+    collisionDetection(xx,yy,sex,hyrax)
 
 
 def prava(event):
@@ -145,18 +76,13 @@ def prava(event):
     sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15,
                              fill=rgb(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)),
                              outline=rgb(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
-    # enemy
-    he = canvas.create_oval(e - 5, r - 5, e + 5, r + 5, fill="Brown")
-    if xx > e:
-        e += enemySpeed
-    elif xx < e:
-        e -= enemySpeed
-    if yy > r:
-        r += enemySpeed
-    else:
-        r -= enemySpeed
+    enemy(e,r,enemySpeed)
+    collisionDetection(xx,yy,sex,hyrax)
+    
 
-    # collision detection
+
+# Functions
+def collisionDetection(xx,yy,sex,hyrax):
     if xx - 15 < e < xx + 15 and yy - 15 < r < yy + 15:
         print("rip")
         canvas.delete(sex)
@@ -168,6 +94,17 @@ def prava(event):
         e, r = 500, 400
         sex = canvas.create_oval(xx - 15, yy - 15, xx + 15, yy + 15)
 
+def enemy(e,r,enemySpeed):
+    he = canvas.create_oval(e - 5, r - 5, e + 5, r + 5, fill="Brown")
+    if xx > e:
+        e += enemySpeed
+    elif xx < e:
+        e -= enemySpeed
+    if yy > r:
+        r += enemySpeed
+    else:
+        r -= enemySpeed
+    
 
 canvas.bind('<ButtonPress>', click)
 canvas.bind_all('<w>', hore)
